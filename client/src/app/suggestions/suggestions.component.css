@@ -17,12 +17,18 @@ li{
     margin: 1vw;
     padding-top:7px;
 }
-
+.different{
+  background-color: #2BBA7E;
+}
 .sort{
     display:flex;
     flex-direction: column;
     margin: 1vh;
     direction:rtl;
+}
+
+.sort-title{
+    font-weight: bold;
 }
 
 .sort-item, .sort-title{
@@ -36,6 +42,7 @@ li{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+    border-radius: 2px;
 }
 
 .item-icon{
@@ -78,8 +85,12 @@ li{
     justify-content: space-between;
     border-radius: 5px;
     background-color: #ff3366;
+    width:7vw
 }
 
+.likes, .dislikes{
+    color:white;
+}
 .info{
     direction:rtl;
     display:flex;
