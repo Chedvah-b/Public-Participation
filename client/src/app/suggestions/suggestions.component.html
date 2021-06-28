@@ -1,0 +1,43 @@
+
+<div class="previous-reports">
+    <nav>
+        <ul>
+            <li><a>מבני ציבור</a></li>
+            <li><a>שטחי מסחר</a></li>
+            <li><a>מרחב פתוח</a></li>
+            <li><a>התחדשות עירונית</a></li>
+
+        </ul>
+    </nav>
+    <div class="main-content">
+        <div class="sort">
+            <div class="sort-title">סינון</div>
+            <div class="sort-item">
+                <div class="item-name">לפי תאריך</div>
+                <img src="https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image-p-1080.jpeg" class="item-icon"/>
+            </div>
+            <div class="sort-item">
+                <div class="item-name">לפי כתובת</div>
+                <img src="https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image-p-1080.jpeg" class="item-icon"/>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="suggestion-item" *ngFor="let item of data">
+            <img class="accident-img" src={{item.img}}/>
+                <div class="info">
+                    <div class="subject">{{item.subject}}</div>
+                    <div class="street">{{item.street}}</div>
+                    <div class="likes-and-dislikes">
+                        <img src="../../../icons/speakingBubble.png"/>
+                        <div class="likes">{{item.likes}}</div>
+                        <img src="../../../icons/whiteLike.png"/>
+                        <div class="dislikes">{{item.dislikes}}</div>
+                        <img src="../../../icons/whiteDislike.png"/>
+                    </div>
+                 </div>
+            </div>
+        </div>
+            
+    </div>
+</div>
