@@ -1,0 +1,30 @@
+//import { User } from "./User";
+
+export class Hazard{
+firstName:string;
+lastName:string;
+email:string;
+whatsapp:string;
+topic:string;
+address:string;
+addressNumber:number;
+subject:string
+description:string;
+picture:string;
+//send:User;
+constructor(firstName:string,lastName:string,email:string,whatsapp:string,topic:string,address:string,addressNumber:number,subject:string,description:string,picture:string){
+this.firstName=firstName;
+this.lastName=lastName;
+this.email=email;
+this.whatsapp=whatsapp;
+this.topic=topic;
+this.address=address;
+this.addressNumber=addressNumber;
+this.subject=subject;
+this.description=description;
+this.picture=picture;
+//this.send=user;
+
+}
+
+}

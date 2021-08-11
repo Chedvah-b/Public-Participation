@@ -1,0 +1,61 @@
+.pinkHeader{
+    color:#ff3366 ;
+    font-size: 18px;
+    font-weight:bold;
+    margin-left: 200px;
+    }
+    .input{
+        background-color:#e8f5e9 ;
+        font-size: 16px;
+        font-weight:normal;
+    border: hidden;
+    height: 40px;
+   width: 200px;
+    }
+    .h1{
+        text-align: unset;
+        margin-left: 655px;
+        color:#1C2B36 ;
+        font-size:29px;
+        font-weight:bold;
+        font-style: normal;
+    }
+    .button{
+        size: 50px;
+        background-color:#099437 ;
+        height: 40px;
+        width: 100px;
+        font-size: 20px;
+        font-weight:bold; 
+    }
+    .div{
+        font:ASSISTANT;
+        font-size: 16px;
+    
+    
+    }
+    .file{
+        font:ASSISTANT;
+        font-size: 16px;
+    }
+    .right{
+        text-align: right;
+        float: right;
+        margin-right: 150px;
+    }
+    .left{
+        text-align: right;
+        float: left;
+        margin-left: 150px;
+    }
+    .btn{
+        
+        background-color:#ff3366 ; ;
+        height: 35px;
+        width: 210px;
+        font-size: 18px;
+        font-weight:bold; 
+    }
+    .radio{
+        text-align: right;
+    }

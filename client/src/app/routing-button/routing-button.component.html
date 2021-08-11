@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-light bg-dark" dir="rtl">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <button class="navbar-toggler" type="button" data-target="#navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <a class="navbar-brand" href="#">   חושבים אחרת! </a>
+        <!-- <img src={{logo2}} > -->
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto" style="font-size: large;">
+            <!-- <li class="nav-item">
+              <a class="nav-link" routerLink="">מידע<span class="sr-only"></span></a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" routerLink="urbanPlanner" style=" color: #2bba7e; font-size: 25px;">מידע</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="hazardReport" style=" color: #2bba7e; font-size: 25px;">דיווח</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="suggestions" style=" color: #2bba7e; font-size: 25px;">דיווחים קודמים</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="logInManager" style=" color: #2bba7e; font-size: 25px;">מנהל האורבני</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="Meizamim" style=" color: #2bba7e; font-size: 25px;">  מיזמים חדשים</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+    </nav>
+    <div class="container scroll">
+        <router-outlet></router-outlet>
+    </div>
+    <footer>
+        <img src={{logo}} >
+        <!-- <button class="btn btn-success" routerLink="logInManager"> כניסה למתכנן אורבני</button> -->
+
+    </footer>

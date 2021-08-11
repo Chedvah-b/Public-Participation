@@ -1,1 +1,104 @@
+<br>
+<div *ngIf="feedback==false">
+<h1 class="h1" style="margin-left: 40px;"> הכנסת דיווחים על מפגעים בשכונה</h1><br>
+<div class="div">
+    <form #userDetail="ngForm" (ngSubmit)="OnSubmit()" >
+    <div class="right">
+        <label class="pinkHeader">:פרטי מדווח</label><br><br>
 
+        <input class="input" type="text" name="firstName" patterm="[0-9]+" placeholder="שם פרטי" [(ngModel)]="hazard.send.firstName"  #firstName="ngModel" ><br><br>
+        <input class="input" type="text" name="lastName" patterm="[0-9]+" placeholder="שם משפחה" [(ngModel)]="hazard.send.lastName"  #lastName="ngModel" ><br><br>
+        <input class="input" type="email" name="email" placeholder="כתובת מייל*" email required [(ngModel)]="hazard.send.email"  #email="ngModel" ><br>
+        <span style="color: red;"  *ngIf="email.errors && email.errors.required  && email.touched">*שדה זה חובה</span>
+        <span  style="color: red;"  *ngIf="email.errors && email.errors.email">*המייל אינו חוקי</span>
+        <br><br>
+        <input class="input" type="text"  pattern="[0-9]+"   name="whatsapp" minlength="10" maxlength="11" placeholder="whatsapp*" [(ngModel)]="hazard.send.whatsapp"    #whatsapp="ngModel"><br>
+        <span style="color: red;"  *ngIf="whatsapp.errors &&( whatsapp.errors.minlength||whatsapp.errors.maxlength)">*המספר אינו חוקי!</span> <br>
+        
+        <b><p>הדיווח הוא לצורך מעקב<br>
+        של הוועדה הפיזית ויש לפנות<br>
+    גם למוקד 106 לשם טיפול<br></p></b>
+    </div>
+
+
+        <div class="left">
+        <label class="pinkHeader">:פרטי דיווח</label><br><br>
+        
+        <select  class="input" type="select" name="topic"  required   [(ngModel)]="hazard.topic"   #topic="ngModel">
+        <option value="" hidden>בחר תחום</option>
+        <option [value]="topics[0]" >מבני ציבור</option>
+        <option [value]="topics[1]" >שטחי מסחר</option>
+        <option [value]="topics[2]" >מרחב פתוח</option>
+        <option [value]="topics[3]" [(ngModel)]="hazard.topic">התחדשות עירונית</option>
+        </select><br>
+        <span style="color: red;"  *ngIf="topic.errors && topic.errors.required  && topic.touched">*שדה זה חובה</span>
+      
+        <br><br>
+        <select  required type="select" name="address" class="input" [(ngModel)]="hazard.address"   #address="ngModel">
+            <option value="" hidden>בחר רחוב </option>
+            <option> לואי ליפסקי</option>
+            <option> זריצקי</option>
+            <option>מינץ</option>
+            <option>סולם יעקב</option>
+            <option>צבי מסליאנסקי</option>
+            <option>רביבים</option>
+            <option>קהילות שום</option>
+            <option>אחר</option>
+        </select><br>
+        <span style="color: red;"  *ngIf="address.errors && address.errors.required  && address.touched">*שדה זה חובה</span>
+
+   
+        <br><br>
+        <input class="input"  type="number" pattern="[0-9]+" neme="addressNumber" placeholder="מספר רחוב" [(ngModel)]="hazard.addressNumber"  #addressNumber="ngModel"><br><br>
+   
+        <input  class="input" type="text"  name="subject" required pattern="[A-Za-z]+" placeholder="נושא*" [(ngModel)]="hazard.subject"    #subject="ngModel"><br>
+        <span style="color: red;"  *ngIf="subject.errors && subject.errors.required  && subject.touched">*שדה זה חובה</span><br>
+
+ 
+         <textarea id="subject" name="subject" placeholder="Write something.." style="height:130px" class="input" required type="text"  name="description" pattern="[A-Za-z]+" placeholder="פירוט על המפגע*" [(ngModel)]="hazard.description"    #description="ngModel"></textarea><br>
+        <span style="color: red;"  *ngIf="description.errors && description.errors.required  && description.touched">*שדה זה חובה</span><br>
+        
+      
+        <input type="file" name="picture" class="file" [(ngModel)]="hazard.picture"    #picture="ngModel">
+        <img src="../../assets/איקון מצלמה-01.png"><br><br>
+        <!-- <label for="pwd">password  </label>
+        <input type="password" name="pwd" minlength="8" [(ngModel)]="userDetails.pwd" #pwd="ngModel"><br>
+        <span style="color: red;"  *ngIf="pwd.errors && pwd.errors.minlength">*you need to enter at laest 8 digits!</span> <br><br>
+     -->
+
+        <button class="btn"  id="submit" type="שליחה"  (click)="OnSubmit()"  >שליחה</button>
+        
+        <br>
+    <br>
+    </div>
+
+    </form>
+    </div>
+  
+</div>
+
+
+    <!-- <h1  *ngIf="feedback==true"> 👍תושב נאמן</h1> -->
+    <img style="height: 800;width: 800px;"  src="../../assets/פופאפים6.png"  *ngIf="feedback==true" />
+    
+
+
+    <!-- The Modal -->
+<!-- <div id="myModal" class="modal"> -->
+
+    <!-- Modal content -->
+    <!-- <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>כל הכבוד! פניתך נקלטה במערכת</p>
+    </div>
+   -->
+  <!-- </div> -->
+
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+  
+ 

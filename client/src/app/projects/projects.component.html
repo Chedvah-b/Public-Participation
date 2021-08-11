@@ -1,0 +1,78 @@
+
+            <!-- <div class="suggestion-item" *ngFor="let item of pro"> -->
+                <!-- <div class="info">
+                    <div class="subject">{{item.topic}}</div>
+                    <div class="street">{{item.category1}}</div>
+                    <div class="likes-and-dislikes">
+                        <img src="../../../icons/speakingBubble.png"/>
+                        <div class="likes">{{item.category1_like}}</div>
+                        <img src="../../../assets/whiteLike.png"/>
+                        <div class="dislikes">{{item.category1_unLike}}</div>
+                        <img src="../../../assets/whiteDislike.png"/>
+                    </div>
+                 </div> -->
+                 <br>
+                 <div class="wrapper" *ngFor="let item of pro"> 
+                     <div><img class="pro-img" src={{item.img}}></div>
+                     <div>
+                     <div class="pro-topic"> <b>נושא:</b> {{item.topic}}</div>
+                     <div class="pro-details"> <b>פרטים:</b>{{item.details}} </div></div>
+
+                     <div class="likes-and-dislikes">
+                        <ul>
+                         <li><div>{{item.category1}}</div><div ><button (click)="like(item,1)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category1_like}}</button></div><div><button (click)="unLike(item,1)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category1_unLike}}</button></div></li>
+                    </ul>
+                    <ul>
+                        <li><div>{{item.category2}}</div><div ><button (click)="like(item,2)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category2_like}}</button></div><div><button (click)="unLike(item,2)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category2_unLike}}</button></div></li>
+                   </ul>
+                   <ul>
+                    <li><div>{{item.category3}}</div><div ><button (click)="like(item,3)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category3_like}}</button></div><div><button (click)="unLike(item,3)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category3_unLike}}</button></div></li>
+               </ul>
+               <ul>
+                <li><div>{{item.category4}}</div><div ><button (click)="like(item,4)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category4_like}}</button></div><div><button  (click)="unLike(item,4)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category4_unLike}}</button></div></li>
+                  </ul>
+                  <ul>
+                  <li><div>{{item.category5}}</div><div ><button (click)="like(item,5)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category5_like}}</button></div><div><button (click)="unLike(item,5)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category5_unLike}}</button></div></li>
+                   </ul>
+                    </div>
+                    <div name ="piechart" class="piechart"></div>
+
+                </div>
+                <img src="../../assets/‏‏צילום מסך (13).png">
+
+
+                <div class="items">
+                    <!-- <div class="empty" *ngIf="!dataByCategory.length; else display">לא נמצאו נתונים</div> -->
+                    <ng-template #display>
+                        <div class="suggestion-item" *ngFor="let item of pro" >
+                            <img class="accident-img" src={{item.img}}/>
+                                <div class="info">
+                                    <div class="info-top">
+                                        <div class="bold">נושא המפגע:</div>
+                                        <div class="pro-topic"> <b>נושא:</b> {{item.topic}}</div>
+                                        <div class="pro-details"> <b>פרטים:</b>{{item.details}} </div></div>
+                                        <!-- <div class="subject margin-bottom">{{item.subject}}</div> -->
+                                        <!-- <div class="bold">רחוב:</div> -->
+                                        <!-- <div class="street  margin-bottom">{{item.street}}</div> -->
+                                    </div>
+                                    <div class="likes-and-dislikes-container">
+                                        <img class="bubble" src="../../../assets/speakingBubble.png"/>
+                                        <div class= "likes-and-dislikes">
+                                            <div>{{item.category1}}</div><div ><button (click)="like(item,1)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category1_like}}</button></div><div><button (click)="unLike(item,1)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category1_unLike}}</button></div>
+                       <div>{{item.category2}}</div><div ><button (click)="like(item,2)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category2_like}}</button></div><div><button (click)="unLike(item,2)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category2_unLike}}</button></div>
+                <li><div>{{item.category4}}</div><div ><button (click)="like(item,4)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category4_like}}</button></div><div><button  (click)="unLike(item,4)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category4_unLike}}</button></div></li>
+                <li><div>{{item.category4}}</div><div ><button (click)="like(item,4)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category4_like}}</button></div><div><button  (click)="unLike(item,4)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category4_unLike}}</button></div></li>
+                <li><div>{{item.category5}}</div><div ><button (click)="like(item,5)" class="likes" style="background-image:url(/../../assets/1.png)">{{item.category5_like}}</button></div><div><button (click)="unLike(item,5)" class="dislikes" style="background-image:url(/../../assets/2.png)">{{item.category5_unLike}}</button></div></li>
+
+
+
+                                            <!-- <img class="likes-pic" src="../../../assets/whiteLike.png"/>
+                                            <div class="dislikes">{{item.dislikes}}</div>
+                                            <img class="dislikes-pic" src="../../../assets/whiteDislike.png"/> -->
+                                        <!-- </div> -->
+                                    </div>
+                                 </div>
+                            </div>
+                        </ng-template>
+                    
+                </div>

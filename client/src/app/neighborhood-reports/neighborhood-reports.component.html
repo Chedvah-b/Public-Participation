@@ -1,0 +1,45 @@
+<!-- <p>neighborhood-reports works!</p>
+    
+<p>דיווחים בשכונה</p>
+<div>
+    <form #userDetail="ngForm" >
+    <div>
+        <input type="text" name="firstName" placeholder="שם פרטי" [(ngModel)]="hazard.send.firstName"  #firstName="ngModel" ><br><br>
+        <input type="text" name="lastName" placeholder="שם משפחה" [(ngModel)]="hazard.send.lastName"  #lastName="ngModel" ><br><br>
+        <input type="email" name="email" placeholder="כתובת מייל" [(ngModel)]="hazard.send.email" required #email="ngModel" email>
+        <span style="color: red;"  *ngIf="email.errors && email.errors.required  && email.touched">*This field is required!</span>
+        <span style="color: red;"  *ngIf="email.errors && email.errors.email">*the email is not correct!</span><br><br>
+        
+        
+        <input type="text"  pattern="[0-9]+"   name="whatsapp" minlength="10" maxlength="11" placeholder="whatsapp" [(ngModel)]="hazard.send.whatsapp"    #whatsapp="ngModel"><br>
+        <span style="color: red;"  *ngIf="whatsapp.errors && whatsapp.errors.required  && email.touched">*This field is required!</span>
+        <span style="color: red;"  *ngIf="whatsapp.errors && whatsapp.errors.minlength">*the phone number is not correct!</span> <br>
+      
+        <select type="select" required name="topic"  placeholder="choose topic" [(ngModel)]="hazard.topic"    #topic="ngModel"><br><br><br>
+        <option  [(ngModel)]="hazard.topic">מבני ציבור</option>
+        <option  [(ngModel)]="hazard.topic">שטחי מסחר</option>
+        <option  [(ngModel)]="hazard.topic">מרחב פתוח</option>
+        <option  [(ngModel)]="hazard.topic">התחדשות עירונית</option>
+        </select><br><br>
+
+         <select>
+            <option  *ngFor="#address of addressArray" [name]="address ">{{address}}</option>
+        </select> -->
+        <!-- <input type="number" pattern="[0-9]+" neme="addressNumber" placeholder="מספר רחוב" [(ngModel)]="hazard.addressNumber"  #addressNumber="ngModel"><br><br>
+   
+        <input type="text"  name="subject" pattern="[A-Za-z]+" placeholder="נושא" [(ngModel)]="hazard.subject"    #subject="ngModel"><br><br>
+        <input type="text"  name="description" pattern="[A-Za-z]+" placeholder="פירוט על המפגע" [(ngModel)]="hazard.description"    #description="ngModel"><br>
+        
+
+      
+        
+        <! <label for="pwd">password  </label>
+        <input type="password" name="pwd" minlength="8" [(ngModel)]="userDetails.pwd" #pwd="ngModel"><br>
+        <span style="color: red;"  *ngIf="pwd.errors && pwd.errors.minlength">*you need to enter at laest 8 digits!</span> <br><br>
+     
+        <button id="submit" type="submit" >submit</button>
+    <input type="file" name="image">
+    </div>
+    
+    </form>
+    </div> --> 

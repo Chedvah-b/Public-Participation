@@ -1,0 +1,68 @@
+/* input{
+    min-width: 220px;
+    max-width: 220px;
+    border-radius: 50px;
+   margin-left: 40%; 
+    
+}
+button{
+    margin-left:3%; 
+    height: 50px;
+    width: 100px;
+} */
+.h1{
+    text-align: center;
+    /* margin-left: 655px; */
+    color:#1C2B36 ;
+    font-size:40px;
+    font-weight:bold;
+    font-style: normal;
+}
+
+.wrapper {    
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.form-signin {
+  max-width: 420px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: rgba(238, 238, 238, 0);
+  /* border: 3px dotted rgba(0,0,0,0.1);   */
+  }
+
+/* .form-signin-heading {
+  text-align:center;
+  margin-bottom: 30px;
+} */
+
+/* .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+} */
+
+input[type="text"] {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.colorgraph {
+  height: 7px;
+  border-top: 0;
+  background: #2bba7e;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #2bba7e, #2bba7e 12.5%, #2bba7e 12.5%, #2bba7e 25%, #2bba7e 25%, #2bba7e 37.5%, #2bba7e 37.5%, #2bba7e 50%, #2bba7e 50%, #2bba7e 62.5%, #2bba7e 62.5%, #2bba7e 75%, #2bba7e 75%, #2bba7e 87.5%, #2bba7e 87.5%, #2bba7e);
+  background-image: -moz-linear-gradient(left, #2bba7e, #2bba7e 12.5%, #2bba7e 12.5%, #2bba7e 25%, #2bba7e 25%, #2bba7e 37.5%, #2bba7e 37.5%, #2bba7e 50%, #2bba7e 50%, #2bba7e 62.5%, #2bba7e 62.5%, #2bba7e 75%, #2bba7e 75%, #2bba7e 87.5%, #2bba7e 87.5%, #2bba7e);
+  background-image: -o-linear-gradient(left, #2bba7e, #2bba7e 12.5%, #2bba7e 12.5%, #2bba7e 25%, #2bba7e 25%, #2bba7e 37.5%, #2bba7e 37.5%, #2bba7e 50%, #2bba7e 50%, #2bba7e 62.5%, #2bba7e 62.5%, #2bba7e 75%, #2bba7e 75%, #2bba7e 87.5%, #2bba7e 87.5%, #2bba7e);
+  background-image: linear-gradient(to right, #2bba7e, #2bba7e 12.5%, #2bba7e 12.5%, #2bba7e 25%, #2bba7e 25%, #2bba7e 37.5%, #2bba7e 37.5%, #2bba7e 50%, #2bba7e 50%, #2bba7e 62.5%, #2bba7e 62.5%, #2bba7e 75%, #2bba7e 75%, #2bba7e 87.5%, #2bba7e 87.5%, #2bba7e);
+}

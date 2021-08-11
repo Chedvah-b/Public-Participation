@@ -1,0 +1,161 @@
+<form #userDetail="ngForm"  >
+  <br><br>
+<h1 class="h1">מתכנן אורבני</h1>
+  <div class="right">
+          <p class="pinkHeader">:דיווחים בשכונה</p><br>
+          <!-- <label class="input" required>בחר תחום*</label><br><br> -->
+          <select  class="input" type="select"  required name="topic"     >
+              <option hidden> בחר תחום</option>
+          <option>מבני ציבור</option>
+          <option  >שטחי מסחר</option>
+          <option >מרחב פתוח</option>
+          <option >התחדשות עירונית</option>
+          </select><br>
+          <!-- <span style="color: red;"  *ngIf="topic.errors && topic.errors.required  && topic.touched">*שדה זה חובה</span> -->
+          
+     
+      
+          <br>
+          <!-- <br><img src="../../assets/איקון כתובת-01.png"> -->
+          <select required  class="input"> 
+              <option hidden>בחר רחוב</option> 
+              <option> לואי ליפסקי</option>
+              <option> זריצקי</option>
+              <option>מינץ</option>
+              <option>סולם יעקב</option>
+              <option>צבי מסליאנסקי</option>
+              <option>רביבים</option>
+              <option>קהילות שום</option>
+              <option>אחר</option>
+          </select><br>
+     
+          <br>
+          <input class="input"  type="number" pattern="[0-9]+" neme="addressNumber" placeholder="מספר רחוב" ><br><br>
+     
+          <input  class="input" type="text"  name="subject" pattern="[A-Za-z]+" placeholder="נושא*"required  ><br><br>
+          <!-- <span style="color: red;"  *ngIf="subject.errors && subject.errors.required  && subject.touched">*שדה זה חובה</span><br> -->
+  
+   
+           <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" class="input" required type="text"  name="description" pattern="[A-Za-z]+" placeholder="פירוט על המפגע*" ></textarea><br>
+          <!-- <span style="color: red;"  *ngIf="description.errors && description.errors.required  && description.touched">*שדה זה חובה</span><br> -->
+          
+    
+        
+          <input type="file" name="image" class="file">
+          <img src="../../assets/איקון מצלמה-01.png"><br><br>
+          <button class="btn"  id="submit" type=submit (click)="send()"  >שליחה</button>
+      </div>
+      </form>
+  <form>
+      <div class="left">
+        <p class="pinkHeader">:פרטי המיזם</p><br>
+        <!-- <label class="input" required>בחר תחום*</label><br><br> -->
+        <select  class="input" type="select"  required name="topic"     >
+            <option hidden> בחר תחום</option>
+        <option>מבני ציבור</option>
+        <option  >שטחי מסחר</option>
+        <option >מרחב פתוח</option>
+        <option >התחדשות עירונית</option>
+        </select><br>
+        <!-- <label class="pinkHeader">:פרטי המיזם</label><br><br> -->
+         <div class="radio">  <label class="input" required style="text-align: center; background-color: white;" >  </label><br>
+          
+        
+           הוספת ספסלים <input type="radio" ><br>
+           הוספת הצללה <input type="radio"><br>
+           הסרת עמודים <input type="radio"><br>
+          תיקון תאורה <input type="radio" ><br>
+           ריבוד בדשא <input type="radio"><br>
+          אחר <input type="radio"><br></div>
+          <!-- <select  class="input" type="select"  required name="topic"     >
+          <option>מבני ציבור</option>
+          <option  >שטחי מסחר</option>
+          <option >מרחב פתוח</option>
+          <option >התחדשות עירונית</option>
+          </select><br> -->
+          <!-- <span style="color: red;"  *ngIf="topic.errors && topic.errors.required  && topic.touched">*שדה זה חובה</span> -->
+          
+     
+  <!--         
+          <br><br>
+          <select required  class="input"> 
+              <option> לואי ליפסקי</option>
+              <option> זריצקי</option>
+              <option>מינץ</option>
+              <option>סולם יעקב</option>
+              <option>צבי מסליאנסקי</option>
+              <option>רביבים</option>
+              <option>קהילות שום</option>
+              <option>אחר</option>
+          </select><br> -->
+     
+        
+          <!-- <input class="input"  type="number" pattern="[0-9]+" neme="addressNumber" placeholder="מספר רחוב" ><br><br> -->
+     <br>
+          <input  class="input" type="text"  name="subject" pattern="[A-Za-z]+" placeholder="כותרת*"required  ><br>
+          <!-- <span style="color: red;"  *ngIf="subject.errors && subject.errors.required  && subject.touched">*שדה זה חובה</span><br> -->
+  
+   <br>
+           <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" class="input" required type="text"  name="description" pattern="[A-Za-z]+" placeholder="פירוט על המיזם*" ></textarea><br>
+          
+  <br>
+       
+          <input type="file" name="image" class="file"> 
+          <img src="../../assets/איקון מצלמה-01.png"><br><br>
+        
+          <button class="btn"  id="submit" type=submit  (click)="OnSubmit()">שליחה</button>
+          <br>
+          <br>
+      </div>
+      <br>
+      <br>
+      <br>
+      </form>
+  
+      <!-- </div>
+  
+    <div class="container">
+      <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Country</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
+    </div> --> 
+  
+  

@@ -1,0 +1,137 @@
+
+*{
+    font-family: 'Times New Roman', Times, serif,assistant;
+
+    direction:rtl;
+    
+}
+
+
+.wrapper {
+    display: grid;
+    background-color: #e8f5e9;
+    padding: 70px;
+    margin: 30px 100px 30px 100px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 60px  60px 60px 60px;
+}
+.pro-topic,.pro-details{
+    font-size: 18px;
+font-weight: bold;
+margin: 20px 30px 20px 30px;
+}
+ul{
+    margin:  15px , 15px;
+
+    justify-content: center;
+    
+}
+
+li{
+
+       display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-template-rows:15px 15px 15px;
+ 
+
+   
+}/*
+.different{
+  background-color: #2BBA7E;
+}
+*/
+
+.item-icon{
+    width: 60px;
+    height: auto;
+}
+/*
+.main-content{
+    margin: 5vw;
+    display:flex;
+   
+}
+
+.sort{
+    width:10vw;
+    height: auto;
+}
+
+.items{
+    height: 80vh;
+    width:70vw;
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.suggestion-item{
+   
+    text-align: center;
+    height: 20vh;
+    width:25vw;
+    margin:3vh;
+    justify-content: space-between;
+}*/
+/*
+.likes-and-dislikes{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #ff3366;
+    width:7vw
+}
+
+.likes, .dislikes{
+    color:white;
+}
+
+.info{
+    direction:rtl;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+*/
+.likes{
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 20px;
+    font-size: 17px;
+    font-weight: bold;
+  border: none;
+    
+  
+}
+.dislikes{
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 20px;
+    font-size: 17px;
+    font-weight: bold;
+  border: none;
+    
+  
+}
+.pro-img{
+    width:17vw;
+    margin-left: 2vw;
+    
+}
+
+.piechart {
+    margin-right: 25% ;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+        pink 70deg, 
+        lightblue 0 50%, 
+        orange 0);
+}
+img{
+    width: 120%;
+    height: 120%;
+    }

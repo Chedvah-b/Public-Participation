@@ -1,0 +1,30 @@
+img{
+    /* margin-top:28%; */
+    width:100%;
+    /* height:5%; */
+    }
+/* footer{
+    /* margin-top:30%; 
+    }    */
+
+   
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    .nav-item::after {
+        content: '';
+        display: block;
+        width: 0px;
+        height: 2px;
+        background: #2bba7e;
+        transition: 0.4s
+    }
+
+    .nav-item:hover::after {
+        width: 100%
+    }

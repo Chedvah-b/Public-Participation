@@ -1,42 +1,60 @@
 
 <div class="previous-reports">
-    <nav>
-        <ul>
-            <li class="different"><a>מבני ציבור</a></li>
-            <li><a>שטחי מסחר</a></li>
-            <li><a>מרחב פתוח</a></li>
-            <li><a>התחדשות עירונית</a></li>
-
-        </ul>
-    </nav>
-    <div class="main-content">
-        <div class="sort">
-            <div class="sort-title">סינון</div>
-            <div class="sort-item">
-                <div class="item-name">לפי תאריך</div>
-                <img src="../../../icons/date.png" class="item-icon"/>
-            </div>
-            <div class="sort-item">
-                <div class="item-name">לפי כתובת</div>
-                <img src="../../../icons/address.png" class="item-icon"/>
-            </div>
+    <div class="sort">
+        <div class="sort-title bold" >סינון</div>
+        <input 
+            #filterDate
+            class="date-menu sort-item" 
+            type="date" 
+            (change)="onDateChange($event)"
+        >
+        <div class="sort-item address-menu">
+            <img src="../../../assets/address.png" class="item-icon"/>
+            <input
+            #filterStreet
+            type="text"
+            placeholder="בחר רחוב"
+            class="street-input"
+            (keyup.enter)="onAddressChange($event)"
+            >
         </div>
+    </div>
+
+    
+    <div class="main-content">
+        <nav>
+            
+            <a [ngClass]="status(0) ? 'dark-green' : 'light-green'" class="bold" (click)="filterDate.value=''" (click)="filterStreet.value=''" (click)="onDisplayClick($event,'publicBuildings',0)">מבני ציבור</a>
+            <a [ngClass]="status(1) ? 'dark-green' : 'light-green'" class="bold" (click)="filterDate.value=''" (click)="filterStreet.value=''" (click)="onDisplayClick($event,'buisnessAreas',1)">שטחי מסחר</a>
+            <a [ngClass]="status(2) ? 'dark-green' : 'light-green'" class="bold" (click)="filterDate.value=''" (click)="filterStreet.value=''" (click)="onDisplayClick($event,'openSpace',2)">מרחב פתוח</a>
+            <a [ngClass]="status(3) ? 'dark-green' : 'light-green'" class="bold" (click)="filterDate.value=''" (click)="filterStreet.value=''" (click)="onDisplayClick($event,'urbanReneral',3)">התחדשות עירונית</a>
+        </nav>
 
         <div class="items">
-            <div class="suggestion-item" *ngFor="let item of data">
-            <img class="accident-img" src={{item.img}}/>
-                <div class="info">
-                    <div class="subject">{{item.subject}}</div>
-                    <div class="street">{{item.street}}</div>
-                    <div class="likes-and-dislikes">
-                      <!--  <img src="../../../icons/speakingBubble.png"/>-->
-                        <div class="likes">{{item.likes}}</div>
-                        <img src="../../../icons/whiteLike.png"/>
-                        <div class="dislikes">{{item.dislikes}}</div>
-                        <img src="../../../icons/whiteDislike.png"/>
+            <div class="empty" *ngIf="!dataByCategory.length; else display">לא נמצאו נתונים</div>
+            <ng-template #display>
+                <div class="suggestion-item" *ngFor="let item of dataByCategory" >
+                    <img class="accident-img" src={{item.img}}/>
+                        <div class="info">
+                            <div class="info-top">
+                                <div class="bold">נושא המפגע:</div>
+                                <div class="subject margin-bottom">{{item.subject}}</div>
+                                <div class="bold">רחוב:</div>
+                                <div class="street  margin-bottom">{{item.street}}</div>
+                            </div>
+                            <div class="likes-and-dislikes-container">
+                                <img class="bubble" src="../../../assets/speakingBubble.png"/>
+                                <div class= "likes-and-dislikes">
+                                    <div class="likes">{{item.likes}}</div>
+                                    <img class="likes-pic" src="../../../assets/whiteLike.png"/>
+                                    <div class="dislikes">{{item.dislikes}}</div>
+                                    <img class="dislikes-pic" src="../../../assets/whiteDislike.png"/>
+                                </div>
+                            </div>
+                         </div>
                     </div>
-                 </div>
-            </div>
+                </ng-template>
+            
         </div>
             
     </div>
