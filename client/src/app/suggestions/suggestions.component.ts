@@ -27,9 +27,8 @@ export class SuggestionsComponent implements OnInit {
       this.isClicked[i]=false;
     }
     this.isClicked[index]=true;
-    console.log(this.isClicked)
     this.noInitialState=true;
-    this.dataToDisplay=this.data.filter(element=>element.topic/*type*/==displayType);
+    this.dataToDisplay=this.data.filter(element=>element.topic == displayType);
     this.dataByCategory=this.dataToDisplay;
   });
   
